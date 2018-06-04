@@ -11,12 +11,19 @@ int value = 0;
 void setup() {
 size(700, 700);
 color fillVal = color(126);
+frameRate(60);
 
 }
 
 void draw() {
   background(100, 10, 100);
   rect(x, y, 20, 20);
+  if(y ==700) {
+    y=0 ;
+  }
+  if(y==1) {
+    y=600;
+  }
   
 }
 
