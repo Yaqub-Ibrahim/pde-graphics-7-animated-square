@@ -22,7 +22,13 @@ void draw() {
     y=0 ;
   }
   if(y==1) {
-    y=600;
+    y=699;
+  }
+  if(x==700) {
+    x=0 ;
+  }
+  if(x==1) {
+    x=699;
   }
   
 }
@@ -50,11 +56,13 @@ void keyPressed() {
   if (key == CODED) {
     if (keyCode == RIGHT) {
       fillVal = 255;
-      x= x=1;
+      x= x+1;
     } else if (keyCode == LEFT) {
       fillVal = 0;
       x= x-1;
     } 
   }
+  
+ 
 }
     
