@@ -5,6 +5,8 @@
  * <Two sentence description of program>
  * 
  */
+ 
+int speed = 1;
 int x = 350;
 int y = 350;
 int value = 0;
@@ -18,16 +20,16 @@ frameRate(60);
 void draw() {
   background(100, 10, 100);
   rect(x, y, 20, 20);
-  if(y ==700) {
+  if(y>700) {
     y=0 ;
   }
-  if(y==1) {
-    y=699;
+  if(y<1) {
+    y=700;
   }
-  if(x==700) {
+  if(x>700) {
     x=0 ;
   }
-  if(x==1) {
+  if(x<1) {
     x=699;
   }
   
@@ -45,10 +47,10 @@ void keyPressed() {
    if (key == CODED) {
     if (keyCode == UP) {
       fillVal = 255;
-      y= y-1;
+      y= y-speed;
     } else if (keyCode == DOWN) {
       fillVal = 0;
-      y= y+1;
+      y= y+speed;
     } 
   } else {
     fillVal = 126;
@@ -56,13 +58,17 @@ void keyPressed() {
   if (key == CODED) {
     if (keyCode == RIGHT) {
       fillVal = 255;
-      x= x+1;
+      x= x+speed;
     } else if (keyCode == LEFT) {
       fillVal = 0;
-      x= x-1;
+      x= x-speed;
     } 
   }
+ if (keyPressed) {
+    if (key == 'p' || key == 'P') {
+      speed = 10;
+      
+    }
+  } 
   
- 
-}
-    
+}    
