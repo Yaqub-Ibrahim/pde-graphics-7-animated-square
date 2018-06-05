@@ -1,8 +1,10 @@
 /**
- * <program/assignment name>
- * by <Your Name>
+ * processing-graphics-7-animated-square
+ 
+ 
+ * by Yaqub Ibrahim
  * 
- * <Two sentence description of program>
+ * Moving Square
  * 
  */
 
@@ -14,7 +16,9 @@ void setup() {
   size(700, 700);
   color fillVal = color(126);
   frameRate(60);
+  //set up values
 }
+
 
 void draw() {
   background(100, 10, 100);
@@ -31,14 +35,14 @@ void draw() {
   }
   if (x<1) {
     x=699;
-  }
+  } //wraps the square around when touching an edge
+
   fill(255, 0, 0);
   rect(0, 0, 700, 40);
   textSize(22);
   fill(0, 0, 0);
   text("Warning: Wormhole detected ahead. Approach with caution.", 40, 35);
-  
-  
+  //red rectangle at top of screen warning of worm holes
 }
 
 void keyPressed() {
@@ -69,10 +73,12 @@ void keyPressed() {
       fillVal = 0;
       x= x-speed;
     }
+    //sets up the controls of the rectangle
   }
   if (keyPressed) {
     if (key == 'p' || key == 'P') {
       speed = 10;
+      //increases the square's speed when you press p
     }
   }
 }    
