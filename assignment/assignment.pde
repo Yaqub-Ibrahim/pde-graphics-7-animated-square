@@ -18,6 +18,7 @@ void setup() {
 
 void draw() {
   background(100, 10, 100);
+  fill(128, 128, 128);
   rect(x, y, 20, 20);
   if (y>699) {
     y=1 ;
