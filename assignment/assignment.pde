@@ -31,6 +31,13 @@ void draw() {
   if (x<1) {
     x=699;
   }
+  fill(255, 0, 0);
+  rect(0, 0, 700, 40);
+  textSize(22);
+  fill(0, 0, 0);
+  text("Warning: Wormhole detected ahead. Approach with caution.", 40, 35);
+  
+  
 }
 
 void keyPressed() {
